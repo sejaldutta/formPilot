@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Messy portal form (fixture)</title></head>
+<body>
+  <h1>Older portal style layout (test fixture)</h1>
+
+  <form id="main-form" name="registration" action="/apply/submit?token=SECRET123" method="POST">
+    <input type="hidden" name="csrf" value="abc">
+    <table>
+      <tr><td>Applicant Mobile No. <span class="req">*</span></td>
+          <td><input type="tel" name="mobile" maxlength="10"></td></tr>
+      <tr><td>Email ID :</td>
+          <td><input type="email" name="email" autocomplete="email"></td></tr>
+    </table>
+
+    <div class="row"><span>Father's Name</span> <input type="text" name="fatherName"></div>
+
+    <input type="text" name="aadhaar" aria-label="Aadhaar Number" maxlength="12">
+
+    <label id="addr-label">Permanent Address</label>
+    <textarea name="address" aria-labelledby="addr-label"></textarea>
+
+    <input type="password" name="pw">
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- Controls outside any <form>, common on older sites -->
+  <fieldset>
+    <legend>Languages known</legend>
+    <label><input type="checkbox" name="lang" value="hi"> Hindi</label>
+    <label><input type="checkbox" name="lang" value="en"> English</label>
+  </fieldset>
+  <input type="text" name="cert_no" placeholder="Certificate number">
+  <input type="text" name="locked" disabled>
+</body>
+</html>

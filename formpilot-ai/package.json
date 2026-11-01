@@ -1,0 +1,12 @@
+{
+  "name": "formpilot-ai",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": ["extension"],
+  "scripts": {
+    "dev": "npm run dev -w extension",
+    "build": "npm run build -w extension",
+    "typecheck": "npm run typecheck -w extension",
+    "fixtures": "npx --yes serve tests/fixtures/html-forms -l 5500"
+  }
+}

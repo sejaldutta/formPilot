@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Sample Government Form (fixture)</title></head>
+<body>
+  <h1>Application Form (test fixture)</h1>
+  <form action="#" onsubmit="return false">
+    <p><label for="name">Full name (as per Aadhaar)</label><br><input id="name" name="applicant_name" type="text" required></p>
+    <p><label for="dob">Date of birth</label><br><input id="dob" name="dob" type="date"></p>
+    <p><label for="state">State</label><br>
+      <select id="state" name="state">
+        <option value="">Select</option><option>Jharkhand</option><option>Bihar</option><option>West Bengal</option>
+      </select></p>
+    <fieldset><legend>Gender</legend>
+      <label><input type="radio" name="gender" value="F"> Female</label>
+      <label><input type="radio" name="gender" value="M"> Male</label>
+      <label><input type="radio" name="gender" value="O"> Other</label>
+    </fieldset>
+    <p><label for="pin">PIN code</label><br><input id="pin" name="pin" type="text" maxlength="6" pattern="[0-9]{6}"></p>
+    <p><label><input type="checkbox" name="decl"> I declare the above is true</label></p>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

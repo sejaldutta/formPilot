@@ -1,0 +1,91 @@
+:root {
+  --ink: #14213d;
+  --paper: #fafaf7;
+  --rule: #d9dccf;
+  --saffron: #e07a1f;
+  --green: #1b6b45;
+  --danger: #a4262c;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 15px/1.5 system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+.panel { padding: 20px 16px; max-width: 420px; }
+
+.panel__header h1 { margin: 0 0 4px; font-size: 20px; letter-spacing: -0.01em; }
+.panel__header p { margin: 0 0 20px; color: #4a5568; }
+
+.btn {
+  width: 100%;
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--ink);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn:hover:not(:disabled) { background: #1f3260; }
+.btn:focus-visible { outline: 3px solid var(--saffron); outline-offset: 2px; }
+.btn:disabled { opacity: 0.6; cursor: progress; }
+
+.result {
+  margin: 20px 0 0;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 6px 14px;
+  padding-top: 16px;
+  border-top: 1px solid var(--rule);
+}
+.result dt { color: #4a5568; }
+.result dd { margin: 0; font-weight: 600; overflow-wrap: anywhere; }
+
+.error { margin: 16px 0 0; color: var(--danger); }
+
+/* ---- Step 2: detected fields ---- */
+.results { margin-top: 20px; }
+.results__page { margin: 0 0 12px; color: #4a5568; font-size: 13px; overflow-wrap: anywhere; }
+.empty { margin: 12px 0 0; color: #4a5568; }
+
+.form { margin-top: 18px; }
+.form h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  margin: 0 0 4px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--ink);
+  font-size: 15px;
+}
+.form__count { font-size: 13px; font-weight: 400; color: #4a5568; white-space: nowrap; }
+
+.fields { list-style: none; margin: 0; padding: 0; }
+
+.field {
+  display: block;
+  width: 100%;
+  padding: 10px 2px;
+  border: 0;
+  border-bottom: 1px solid var(--rule);
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.field:hover { background: #f1f1ea; }
+.field:focus-visible { outline: 3px solid var(--saffron); outline-offset: -3px; }
+
+.field__label { display: block; font-weight: 600; overflow-wrap: anywhere; }
+.field__meta { display: flex; gap: 12px; color: #4a5568; font-size: 13px; }
+.field__required { color: var(--danger); font-weight: 600; }
+.field__debug { display: block; margin-top: 2px; color: #8a93a3; font-size: 12px; }
